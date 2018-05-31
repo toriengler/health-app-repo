@@ -1,0 +1,23 @@
+
+<link rel="stylesheet" href="/static/style.css">
+
+<h1> Welcome to How's My Health! </h1>
+
+<h2> How are you feeling?<h2>
+
+<p><a href="/add">Happy</a></p>
+
+<p><a href="/add">Sad</a></p>
+
+<p><a href="/add">I don't know</a></p>
+
+
+<p><a href="/add">Indifferent</a></p>
+
+{% for e in entries %}
+<h1> Past Entries <h1>
+    <div class="entry">
+        <p class="entrytext"> {{e['text']}} </p>
+        <p class="metadata"> {{e['author']}} on {{e['timestamp']}} </p>
+    </div>
+{% endfor %}
